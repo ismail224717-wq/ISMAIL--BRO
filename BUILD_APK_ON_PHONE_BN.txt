@@ -1,0 +1,11 @@
+শুধু Android ফোন দিয়ে ALUPS APK বানানোর নির্দেশিকা
+
+১) GitHub.com-এ অ্যাকাউন্ট খুলে লগইন করুন।
+২) + বোতাম > New repository নির্বাচন করুন। নাম দিন AlupsAndroid এবং Public বা Private বেছে Create repository চাপুন।
+৩) রিপোজিটরির Add file > Upload files চাপুন। ZIP আপলোড করবেন না; ZIP Extract করে ভিতরের AlupsAndroid ফোল্ডারের সব ফাইল/ফোল্ডার আপলোড করুন। .github ফোল্ডারটিও আপলোড করতে হবে। শেষে Commit changes চাপুন।
+৪) রিপোজিটরির Actions ট্যাবে যান। “Build ALUPS APK” workflow দেখা গেলে সেটি খুলুন, Run workflow > Run workflow চাপুন।
+৫) বিল্ড শেষ হলে সবুজ টিক চিহ্নের workflow run খুলুন। নিচের Artifacts অংশে ALUPS-APK চাপলে APK-সহ ZIP ডাউনলোড হবে।
+৬) ডাউনলোড হওয়া artifact ZIP Extract করুন। app-debug.apk ফাইলে চাপ দিয়ে Install করুন। Android অনুমতি চাইলে Settings-এ “Allow from this source” চালু করুন, ইনস্টল শেষে চাইলে আবার বন্ধ করুন।
+৭) ফোনের অ্যাপ তালিকায় “অলুপস ALUPS” খুঁজে ধরে Home screen-এ টেনে আনুন।
+
+নোট: বিল্ড প্রথমবার ব্যর্থ হলে Actions-এর error/log দেখতে হবে; APK তৈরি না হলে ডাউনলোড করার ফাইল থাকবে না। এই workflow APK তৈরি করার চেষ্টা স্বয়ংক্রিয় করে, কিন্তু সফল বিল্ড আগে থেকে নিশ্চিত করে না।
